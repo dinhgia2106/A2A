@@ -4,6 +4,8 @@
 
 In a traditional "Human-to-Agent" model, a human prompts an LLM and manually handles the output. A2A automates this chain, allowing agents to delegate sub-tasks to other specialized agents.
 
+![A2A Protocol](image/Screenshot%202025-12-09%20at%2016.28.10.png)
+
 ## Why A2A?
 
 In complex tasks, such as planning an international trip involving multiple specialized agents (e.g., flight, hotel, currency conversion), A2A resolves the following issues that arise when integrating diverse agents without a standard protocol:
@@ -44,6 +46,8 @@ A JSON metadata file located at `/.well-known/agent-card.json`. It acts as a bus
     "authRequired": false
 }
 ```
+
+![Agent Interaction](image/Screenshot%202025-12-09%20at%2016.27.57.png)
 
 ### 4. Task
 A unit of work submitted to the server.
@@ -104,3 +108,6 @@ This script acts as the Consumer.
 2.  **Submit**: POSTs a request ("Write a simple snake game...").
 3.  **Poll**: Loops checking `GET /tasks/<task_id>` until status is `COMPLETED`.
 4.  **Consumes**: Saves the resulting code to a local file.
+
+![System Overview](image/Screenshot%202025-12-09%20at%2016.23.52.png)
+
